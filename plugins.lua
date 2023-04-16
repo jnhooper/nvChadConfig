@@ -87,6 +87,16 @@ local plugins = {
       require("leap").add_default_mappings()
     end,
   },
+
+  --https://github.com/tpope/vim-fugitive
+  {
+    "tpope/vim-fugitive",
+  },
+
+  {
+    "lewis6991/gitsigns.nvim",
+    dependencies = { "tpope/vim-fugitive" },
+  },
 }
 
 return plugins

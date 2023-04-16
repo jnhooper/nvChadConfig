@@ -14,6 +14,7 @@ M.disabled = {
     ["<leader>/"] = "",
     ["<leader>rn"] = "",
     ["<leader>ra"] = "",
+    ["<leader>h"] = "",
   },
 
   v = {
@@ -62,6 +63,27 @@ M.jumps = {
   n = {
     ["<C-j>"] = { "5j", "jump down 5 lines" },
     ["<C-k>"] = { "5k", "jump up 5 lines" },
+  },
+}
+
+M.gitsigns = {
+  n = {
+    ["<Leader>hs"] = {
+      ":Gitsigns stage_hunk<CR>",
+      "hunk stage",
+    },
+    ["<Leader>hS"] = {
+      function()
+        require("gitsigns").stage_buffer()
+      end,
+      "HUNK STAGE (stage file)",
+    },
+    ["<Leader>hr"] = {
+      function()
+        require("gitsigns").undo_stage_hunk()
+      end,
+      "hunk reset",
+    },
   },
 }
 
