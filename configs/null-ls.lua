@@ -5,13 +5,17 @@ if not present then
 end
 
 local b = null_ls.builtins
-
 local sources = {
 
   -- webdev stuff
   b.formatting.deno_fmt, -- choosed deno for ts/js files cuz its very fast!
-  b.formatting.prettier_eslint,
+  -- b.formatting.prettier_eslint,
   -- b.formatting.prettierd,
+  -- b.formatting.prettierd,
+  b.formatting.eslint_d,
+  b.diagnostics.eslint_d,
+  -- b.code_actions.eslint,
+  -- lint.eslint_d,
   -- b.formatting.prettier,
   --   .with { filetypes = {
   --   "html",

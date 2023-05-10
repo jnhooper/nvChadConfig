@@ -12,6 +12,7 @@ once you install nvChad you should be able to just clone this into your
 - nvim-surround -> https://github.com/kylechui/nvim-surround
 - some fun ascii art for the dashboard
 - vim-fugitive -> https://github.com/tpope/vim-fugitive
+- two-slash-queries -> marilari88/twoslash-queries.nvim
 
 ## modifications
 
@@ -20,3 +21,5 @@ once you install nvChad you should be able to just clone this into your
 - added support for asto -> https://astro.build/
 - turned on format on save
 - added some gitsigns commands for staging and unstaging hunks
+- `space k` -> show the type for the variable your cursor is on
+- `space ck` -> remove all type comments from the above command

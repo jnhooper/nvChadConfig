@@ -7,6 +7,29 @@ M.general = {
   },
 }
 
+M.split = {
+  n = {
+    ["<leader>m"] = {
+      function()
+        require("treesj").toggle()
+      end,
+      "toggle split/join node",
+    },
+    ["<leader>s"] = {
+      function()
+        require("treesj").split()
+      end,
+      "split node",
+    },
+    ["<leader>j"] = {
+      function()
+        require("treesj").join()
+      end,
+      "join node",
+    },
+  },
+}
+
 M.disabled = {
 
   n = {
@@ -54,6 +77,7 @@ M.lspconfig = {
       end,
       "lsp rename",
     },
+    ["<leader>dd"] = { "<cmd>Telescope diagnostics<CR>", "See diagnostics for current buffer" },
   },
 }
 
@@ -63,6 +87,14 @@ M.jumps = {
   n = {
     ["<C-j>"] = { "5j", "jump down 5 lines" },
     ["<C-k>"] = { "5k", "jump up 5 lines" },
+    ["[g"] = { "<cmd>lua vim.diagnostic.goto_prev()<CR>", "go to previous error" },
+    ["]g"] = { "<cmd>lua vim.diagnostic.goto_next()<CR>", "go to next error" },
+  },
+}
+M.typeCheck = {
+  n = {
+    ["<leader>k"] = { "<cmd>InspectTwoslashQueries<CR>", "inspect type under cursor" },
+    ["<leader>ck"] = { "<cmd>RemoveTwoslashQueries<CR>", "clear all type queries from buffer" },
   },
 }
 

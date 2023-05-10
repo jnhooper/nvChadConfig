@@ -33,7 +33,9 @@ M.mason = {
     "html-lsp",
     "typescript-language-server",
     "deno",
-    "prettierd",
+    "eslint-lsp",
+    -- "prettierd",
+    "eslint_d",
     -- -   "prettier-eslint",
     -- c/cpp stuff
     "clangd",

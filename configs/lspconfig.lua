@@ -7,7 +7,6 @@ local lspconfig = require "lspconfig"
 local servers = {
   "html",
   "cssls",
-  "tsserver",
   "clangd",
   "astro",
 }
@@ -21,3 +20,10 @@ end
 
 --
 -- lspconfig.pyright.setup { blabla}
+lspconfig.tsserver.setup {
+  on_attach = function(client, buffer)
+    on_attach(client, buffer)
+    require("twoslash-queries").attach(client, buffer)
+  end,
+  capabilities = capabilities,
+}

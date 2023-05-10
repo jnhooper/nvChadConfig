@@ -6,6 +6,7 @@ local plugins = {
 
   {
     "neovim/nvim-lspconfig",
+    lazy = false,
     dependencies = {
       -- format & linting
       {
@@ -140,15 +141,48 @@ local plugins = {
       require("leap").add_default_mappings()
     end,
   },
+  {
+    "marilari88/twoslash-queries.nvim",
+    config = function()
+      require("twoslash-queries").setup {
+        multi_line = true, -- to print types in multi line mode
+        highlight = "Type", -- to set up a highlight group for the virtual text
+      }
+    end,
+  },
 
   --https://github.com/tpope/vim-fugitive
   {
     "tpope/vim-fugitive",
+    lazy = false,
   },
 
   {
     "lewis6991/gitsigns.nvim",
     dependencies = { "tpope/vim-fugitive" },
+  },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    config = function()
+      require("indent_blankline").setup {
+        space_char_blankline = " ",
+        show_current_context = true,
+        show_current_context_start = true,
+      }
+    end,
+  },
+  {
+    "Wansmer/treesj",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    -- keys = { "<space>m", "<space>j", "<space>s" },
+    config = function()
+      require("treesj").setup { -- hold|start|end:
+        -- hold - cursor follows the node/place on which it was called
+        -- start - cursor jumps to the first symbol of the node being formatted
+        -- end - cursor jumps to the last symbol of the node being formatted
+        cursor_behavior = "hold",
+      }
+    end,
   },
 }
 
