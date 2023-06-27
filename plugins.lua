@@ -121,12 +121,42 @@ local plugins = {
     end,
   },
   {
+    "folke/zen-mode.nvim",
+    enabled = true,
+  },
+  {
+    "folke/twilight.nvim",
+  },
+  {
     "kylechui/nvim-surround",
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
     config = function()
       require("nvim-surround").setup {
         -- Configuration here, or leave empty to use defaults
+      }
+    end,
+  },
+
+  {
+    "nvim-tree/nvim-web-devicons",
+    config = function()
+      require("nvim-web-devicons").setup {
+        default = true,
+        override_by_filename = {
+          [".gitignore"] = {
+            icon = "",
+            color = "#f1502f",
+            name = "Gitignore",
+          },
+        },
+        override_by_extension = {
+          ["log"] = {
+            icon = "",
+            color = "#81e043",
+            name = "Log",
+          },
+        },
       }
     end,
   },

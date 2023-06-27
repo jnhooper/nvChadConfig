@@ -4,11 +4,24 @@ local M = {}
 M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
+    ["<leader>tw"] = {
+      function()
+        require("twilight").toggle()
+      end,
+      "toggle twilight",
+    },
+    ["<leader>zm"] = {
+      function()
+        require("zen-mode").toggle()
+      end,
+      "toggle zen mode",
+    },
   },
 }
 
 M.split = {
   n = {
+
     ["<leader>m"] = {
       function()
         require("treesj").toggle()
