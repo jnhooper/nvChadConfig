@@ -16,6 +16,10 @@ M.general = {
       end,
       "toggle zen mode",
     },
+    ["<leader>cb"] = {
+      ":%bd|e# <CR>",
+      "close all buffers except current",
+    },
   },
 }
 
@@ -128,6 +132,18 @@ M.gitsigns = {
         require("gitsigns").undo_stage_hunk()
       end,
       "hunk reset",
+    },
+    ["<Leader>gs"] = {
+      ":Gvdiffsplit!<CR>",
+      "git split",
+    },
+    ["dgh"] = {
+      ":diffget //2<CR>|:diffupdate<CR>",
+      "diff get left",
+    },
+    ["dgl"] = {
+      ":diffget //3<CR>|:diffupdate<CR>",
+      "diff get right",
     },
   },
 }

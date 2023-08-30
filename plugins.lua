@@ -122,10 +122,17 @@ local plugins = {
   },
   {
     "folke/zen-mode.nvim",
-    enabled = true,
   },
   {
     "folke/twilight.nvim",
+  },
+  {
+    "nvim-telescope/telescope-fzf-native.nvim",
+    build = "make",
+    config = function()
+      require("telescope").load_extension "fzf"
+    end,
+    lazy = false,
   },
   {
     "kylechui/nvim-surround",
