@@ -3,6 +3,11 @@
 ## install nvim
 https://github.com/neovim/neovim/blob/master/INSTALL.md#install-from-package
 
+## install nvchad
+https://nvchad.com/docs/quickstart/install
+
+## add these custom configs
+
 some minimal additions and modifications to the [nvChad](https://nvchad.com/)
 setup.
 
