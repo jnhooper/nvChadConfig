@@ -1,5 +1,8 @@
 # custom nvChad config
 
+## install nvim
+https://github.com/neovim/neovim/blob/master/INSTALL.md#install-from-package
+
 some minimal additions and modifications to the [nvChad](https://nvchad.com/)
 setup.
 
